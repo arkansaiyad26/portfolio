@@ -1,0 +1,237 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Portfolio | Thumbnail & Video Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        display: none;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50" data-aos="fade-down">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Site Title / Logo -->
+    <h1 class="text-3xl font-extrabold text-indigo-400 cursor-default select-none">Arkan's Portfolio</h1>
+
+    <!-- Navigation Menu -->
+    <nav class="space-x-6 font-semibold text-gray-300">
+      <a href="#about" class="hover:text-indigo-400 transition">About</a>
+      <a href="#portfolio" class="hover:text-indigo-400 transition">Portfolio</a>
+      <a href="#services" class="hover:text-indigo-400 transition">Services</a>
+      <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white py-20">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+
+    <!-- Text on Left -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Creative Thumbnail & Video Editor
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-6">
+        Crafting eye-catching thumbnails and engaging vertical videos tailored to your brand.
+      </p>
+      <a href="#portfolio" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition duration-300 shadow-lg">
+        View Portfolio
+      </a>
+    </div>
+
+    <!-- Larger Circular PNG Image on Right -->
+    <div class="md:w-1/2 flex justify-center">
+      <div class="w-96 h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+        <img src="photo1.png" alt="Thumbnail and Video Editor" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- About Section -->
+  <!-- About Me Section -->
+<section id="about" class="py-16 px-6 bg-gray-800 text-white w-full" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
+      Hi, I'm Arkan Saiyad, a passionate creative specializing in crafting eye-catching thumbnails and engaging vertical videos. With a keen eye for detail and a love for design, I help brands tell their story through visually compelling content tailored to boost engagement and reach.
+    </p>
+  </div>
+</section>
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Featured Work</h2>
+
+      <!-- Tabs -->
+      <div class="flex justify-center mb-8 space-x-4">
+        <button class="tab-btn bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-full" onclick="showCategory('thumbnails')">Thumbnails</button>
+        <button class="tab-btn bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-full" onclick="showCategory('videos')">Videos</button>
+      </div>
+
+      <!-- Thumbnails -->
+      <div id="thumbnails" class="category-section">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-6">
+          <!-- Initial Thumbnails -->
+          <img src="thumbnail1.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 1" />
+          <img src="thumbnail2.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 2" />
+          <img src="thumbnail3.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 3" />
+          <img src="thumbnail4.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 4" />
+        </div>
+
+        <!-- More Thumbnails -->
+        <div id="moreThumbnails" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 hidden">
+          <img src="thumbnail5.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 5" />
+          <img src="thumbnail6.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 6" />
+          <img src="thumbnail7.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 7" />
+          <img src="thumbnail8.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 8" />
+          <img src="thumbnail9.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 9" />
+          <img src="thumbnail10.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 10" />
+          <img src="thumbnail11.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 11" />
+          <img src="thumbnail12.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 12" />
+          <img src="thumbnail13.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 13" />
+          <img src="thumbnail14.jpg" class="thumbnail rounded-xl shadow-md hover:scale-105 transition-transform duration-300 object-cover w-full aspect-[16/9]" alt="Thumbnail 14" />
+        </div>
+
+        <div class="text-center mt-6">
+          <button 
+            id="showMoreBtn" 
+            class="inline-flex items-center gap-2 px-6 py-2 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition duration-300"
+            onclick="toggleThumbnails()"
+          >
+            <span>Show More</span>
+            <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Videos -->
+      <div id="videos" class="category-section hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <video controls class="rounded-xl shadow-md w-full aspect-[9/16]">
+            <source src="video1.mp4" type="video/mp4" />
+          </video>
+          <video controls class="rounded-xl shadow-md w-full aspect-[9/16]">
+            <source src="video2.mp4" type="video/mp4" />
+          </video>
+          <video controls class="rounded-xl shadow-md w-full aspect-[9/16]">
+            <source src="video3.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-800">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">What I Offer</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+          <div class="bg-indigo-600 p-6 rounded-xl shadow" data-aos="fade-right">
+            <h3 class="text-xl font-semibold mb-2">YouTube Thumbnails</h3>
+            <p>I design thumbnails that increase clicks and viewer retention.</p>
+          </div>
+          <div class="bg-pink-600 p-6 rounded-xl shadow" data-aos="fade-left">
+            <h3 class="text-xl font-semibold mb-2">Short-form Video Editing</h3>
+            <p>Clean, eye-catching edits for Instagram Reels and YouTube Shorts.</p>
+          </div>
+          <div class="bg-indigo-600 p-6 rounded-xl shadow" data-aos="fade-right">
+            <h3 class="text-xl font-semibold mb-2">Social Media Posts</h3>
+            <p>Engaging posts tailored to boost engagement and brand identity.</p>
+          </div>
+          <div class="bg-pink-600 p-6 rounded-xl shadow" data-aos="fade-left">
+            <h3 class="text-xl font-semibold mb-2">Brand Kits</h3>
+            <p>Consistent, visually compelling brand assets to elevate your online presence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 text-gray-100 px-6" data-aos="fade-up">
+      <h2 class="text-4xl font-extrabold mb-6 text-center text-indigo-400">Let's Work Together</h2>
+      <div class="space-y-4 text-center text-lg max-w-3xl mx-auto">
+        <p>
+          <span class="font-semibold">Email:</span>
+          <a href="mailto:arkansaiyad28@email.com" class="text-indigo-400 underline hover:text-indigo-300 transition">arkansaiyad28@email.com</a>
+        </p>
+        <p>
+          <span class="font-semibold">Contact No:</span>
+          <a href="tel:+919714954833" class="text-indigo-400 underline hover:text-indigo-300 transition">+91 9714954833</a>
+        </p>
+        <p>
+          <span class="font-semibold">Instagram:</span>
+          <a href="https://instagram.com/arkansaiyad38" class="text-indigo-400 underline hover:text-indigo-300 transition" target="_blank" rel="noopener noreferrer">@arkansaiyad38</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4" data-aos="fade-up">
+      <p>&copy; 2025 Arkan Saiyad. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+      <img id="lightbox-img" src="" alt="Preview" />
+    </div>
+
+    <!-- AOS and Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      function showCategory(id) {
+        document.querySelectorAll('.category-section').forEach(el => el.classList.add('hidden'));
+        document.getElementById(id).classList.remove('hidden');
+      }
+
+      function toggleThumbnails() {
+        const section = document.getElementById("moreThumbnails");
+        const btn = document.getElementById("showMoreBtn");
+        const arrow = document.getElementById("arrowIcon");
+
+        section.classList.toggle("hidden");
+        btn.querySelector("span").textContent = section.classList.contains("hidden") ? "Show More" : "Show Less";
+        arrow.classList.toggle("rotate-180");
+      }
+
+      document.querySelectorAll('.thumbnail').forEach(img => {
+        img.addEventListener('click', () => {
+          document.getElementById('lightbox-img').src = img.src;
+          document.getElementById('lightbox').style.display = 'flex';
+        });
+      });
+    </script>
+  </body>
+</html>
